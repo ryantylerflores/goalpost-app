@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		9F37E5F4207E63430016825B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37E5F3207E63430016825B /* AppDelegate.swift */; };
-		9F37E5F6207E63430016825B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37E5F5207E63430016825B /* ViewController.swift */; };
+		9F37E5F6207E63430016825B /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37E5F5207E63430016825B /* GoalsVC.swift */; };
 		9F37E5F9207E63430016825B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F37E5F7207E63430016825B /* Main.storyboard */; };
 		9F37E5FC207E63430016825B /* GoalPost_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F37E5FA207E63430016825B /* GoalPost_app.xcdatamodeld */; };
 		9F37E5FE207E63440016825B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F37E5FD207E63440016825B /* Assets.xcassets */; };
 		9F37E601207E63440016825B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F37E5FF207E63440016825B /* LaunchScreen.storyboard */; };
+		9F37E60D207E6B630016825B /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37E60C207E6B630016825B /* GoalCell.swift */; };
+		9F744AB5208A6047004DB39F /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F744AB4208A6047004DB39F /* GoalType.swift */; };
+		9F744AB7208A618B004DB39F /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F744AB6208A618B004DB39F /* CreateGoalVC.swift */; };
+		9F744AB9208A661F004DB39F /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F744AB8208A661F004DB39F /* UIViewControllerExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F37E5F0207E63430016825B /* GoalPost-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoalPost-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F37E5F3207E63430016825B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F37E5F5207E63430016825B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F37E5F5207E63430016825B /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		9F37E5F8207E63430016825B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F37E5FB207E63430016825B /* GoalPost_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoalPost_app.xcdatamodel; sourceTree = "<group>"; };
 		9F37E5FD207E63440016825B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F37E600207E63440016825B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F37E602207E63440016825B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F37E60C207E6B630016825B /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		9F744AB4208A6047004DB39F /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
+		9F744AB6208A618B004DB39F /* CreateGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalVC.swift; sourceTree = "<group>"; };
+		9F744AB8208A661F004DB39F /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +64,11 @@
 		9F37E5F2207E63430016825B /* GoalPost-app */ = {
 			isa = PBXGroup;
 			children = (
+				9F37E60B207E63B60016825B /* Extensions */,
+				9F37E60A207E635B0016825B /* Enums */,
+				9F37E609207E63550016825B /* Views */,
+				9F37E608207E63490016825B /* Controllers */,
 				9F37E5F3207E63430016825B /* AppDelegate.swift */,
-				9F37E5F5207E63430016825B /* ViewController.swift */,
 				9F37E5F7207E63430016825B /* Main.storyboard */,
 				9F37E5FD207E63440016825B /* Assets.xcassets */,
 				9F37E5FF207E63440016825B /* LaunchScreen.storyboard */,
@@ -65,6 +76,39 @@
 				9F37E5FA207E63430016825B /* GoalPost_app.xcdatamodeld */,
 			);
 			path = "GoalPost-app";
+			sourceTree = "<group>";
+		};
+		9F37E608207E63490016825B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F37E5F5207E63430016825B /* GoalsVC.swift */,
+				9F744AB6208A618B004DB39F /* CreateGoalVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9F37E609207E63550016825B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F37E60C207E6B630016825B /* GoalCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F37E60A207E635B0016825B /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9F744AB4208A6047004DB39F /* GoalType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		9F37E60B207E63B60016825B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F744AB8208A661F004DB39F /* UIViewControllerExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F37E5F6207E63430016825B /* ViewController.swift in Sources */,
+				9F37E60D207E6B630016825B /* GoalCell.swift in Sources */,
+				9F744AB7208A618B004DB39F /* CreateGoalVC.swift in Sources */,
+				9F744AB5208A6047004DB39F /* GoalType.swift in Sources */,
+				9F37E5F6207E63430016825B /* GoalsVC.swift in Sources */,
 				9F37E5F4207E63430016825B /* AppDelegate.swift in Sources */,
+				9F744AB9208A661F004DB39F /* UIViewControllerExt.swift in Sources */,
 				9F37E5FC207E63430016825B /* GoalPost_app.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
